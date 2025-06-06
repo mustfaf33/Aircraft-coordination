@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تنسيق الطائرات</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container" id="login-section">
+    <h2>تسجيل الدخول</h2>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required />
+      <input type="password" id="password" placeholder="كلمة المرور" required />
+      <button type="submit">دخول</button>
+    </form>
+  </div>
+
+  <div class="main-container" id="main-section" style="display: none;">
+    <h2>مرحبًا <span id="user-email"></span></h2>
+    <button id="logout-btn">تسجيل الخروج</button>
+
+    <form id="flight-form">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>التاريخ</th>
+              <th>رقم الرحلة</th>
+              <th>من</th>
+              <th>إلى</th>
+              <th>وقت الإقلاع</th>
+              <th>وقت الوصول</th>
+              <th>الاسم</th>
+              <th>ملاحظات</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 5 صفوف -->
+            <tr><td><input name='row0_date' type='date'></td><td><input name='row0_flt' type='text'></td><td><input name='row0_from' type='text'></td><td><input name='row0_to' type='text'></td><td><input name='row0_dep' type='time'></td><td><input name='row0_arr' type='time'></td><td><input name='row0_name' type='text'></td><td><input name='row0_note' type='text'></td></tr>
+<tr><td><input name='row1_date' type='date'></td><td><input name='row1_flt' type='text'></td><td><input name='row1_from' type='text'></td><td><input name='row1_to' type='text'></td><td><input name='row1_dep' type='time'></td><td><input name='row1_arr' type='time'></td><td><input name='row1_name' type='text'></td><td><input name='row1_note' type='text'></td></tr>
+<tr><td><input name='row2_date' type='date'></td><td><input name='row2_flt' type='text'></td><td><input name='row2_from' type='text'></td><td><input name='row2_to' type='text'></td><td><input name='row2_dep' type='time'></td><td><input name='row2_arr' type='time'></td><td><input name='row2_name' type='text'></td><td><input name='row2_note' type='text'></td></tr>
+<tr><td><input name='row3_date' type='date'></td><td><input name='row3_flt' type='text'></td><td><input name='row3_from' type='text'></td><td><input name='row3_to' type='text'></td><td><input name='row3_dep' type='time'></td><td><input name='row3_arr' type='time'></td><td><input name='row3_name' type='text'></td><td><input name='row3_note' type='text'></td></tr>
+<tr><td><input name='row4_date' type='date'></td><td><input name='row4_flt' type='text'></td><td><input name='row4_from' type='text'></td><td><input name='row4_to' type='text'></td><td><input name='row4_dep' type='time'></td><td><input name='row4_arr' type='time'></td><td><input name='row4_name' type='text'></td><td><input name='row4_note' type='text'></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <button type="submit">حفظ</button>
+      <button id="export-pdf" type="button">تصدير PDF</button>
+      <button id="export-word" type="button">تصدير Word</button>
+    </form>
+
+    <div id="flights-container"></div>
+  </div>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
